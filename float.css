@@ -1,0 +1,228 @@
+*{
+    box-sizing: border-box;
+   
+}
+
+.flex {
+    display: flex;
+    
+}
+.box {
+    padding:20px;
+    border: 1px solid grey;
+    width: 200px;
+    /* max-height: 200px */
+
+}
+.box1 {
+    margin: 30px;
+}
+.box2 {
+    margin: 30px;
+}
+
+.box3 {
+    margin: 30px;
+}
+.box4 {
+    margin: 30px;
+}
+.box5 {
+    margin: 30px;
+}
+.box6 {
+    margin: 30px;
+}
+.box7 {
+    margin: 30px;
+}
+
+
+
+.item4 {
+    float: none;
+}
+
+.item5 {
+    float: left;
+    width:33%;
+    height: 100px
+}
+
+.item6 {
+    float: left;
+    width:33%;
+    height: 100px
+}
+
+.item7 {
+    float: left;
+    width:33%;
+    height: 100px
+}
+
+
+
+
+
+.item8 {
+    float: none;
+}
+
+.item9 {
+    float: left;
+    width:33%;
+    height: 70px;
+}
+
+.item10 {
+    float: left;
+    width:33%;
+    height: 70px;
+}
+
+.item11 {
+    float: left;
+    width:33%;
+    height: 70px;
+}
+.item12 {
+    clear: both;
+}
+
+
+
+
+
+.item13 {
+    float: left;
+    width: 33%
+}
+.item14 {
+    float:left;
+    width: 67%
+}
+.item15 {
+    float:left;
+    height: 100px;
+    width:33%;
+    
+}
+.item16 {
+    float:left;
+    height: 100px;
+    width:33%;
+    
+}
+.item17 {
+    
+    float:left;
+    height: 100px;
+    width:33%;
+}
+.item18 {
+    clear: both;
+}
+
+
+
+
+
+.item19 {
+    float: left;
+    width: 33%
+}
+.item20 {
+    float:left;
+    width:34%
+}
+.item21 {
+    float:left;
+    width:33%;
+    
+}
+.item22 {
+    float:left;
+    height: 100px;
+    width:33%;
+    
+}
+.item23 {
+    float:left;
+    height: 100px;
+    width:34%;
+}
+.item24{
+    float:left;
+    height: 100px;
+    width:33%;
+}
+.item25{
+    clear: both
+}
+
+
+
+
+.item26 {
+    float:none;
+ }
+
+
+.item27 {
+    float:left;
+    height: 100px;
+    width:25%;
+   
+}
+.item28 {
+    float:left;
+    height: 10px;
+    width:50%;
+    
+}
+.item29 {
+    float:left;
+    height: 60px;
+    width: 50%;
+   
+}
+.item30 {
+    float:left;
+    height: 100px;
+    width:25%;
+}
+
+.item31 {
+    clear: both;
+}
+
+
+
+.item32{
+    float:left;
+    width: 25%;
+    height: 200px;
+}
+.item33 {
+    float:left;
+    height: 100px;
+    width:75%;
+    
+}
+.item34{
+    float:left;
+    height: 100px;
+    width:50%;
+    
+}
+.item35 {
+    
+    float:left;
+    height: 100px;
+    width:25%;
+}
+.item36 {
+    clear: both;
+}
+

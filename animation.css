@@ -1,0 +1,34 @@
+div.border {
+            border: 1px solid black;
+            margin: 10px;
+            width: calc (100%-40px);
+        }
+        
+div.cube {
+
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    animation-name: myCube;
+    animation-timing-function: ease;
+    animation-delay:   0s;
+    animation-duration: 8s;
+    animation-iteration-count: infinite;
+    
+    
+}
+
+@keyframes myCube {
+    0% {
+        margin-left: 0px;
+    }
+    25%, 100% {
+        margin-left: 25%;
+      
+    }
+    100% {
+        margin-left: calc(100% - 40px)}
+    
+    }
+   

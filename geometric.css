@@ -1,0 +1,72 @@
+
+    .circle1 {
+height: 50px;
+width: 50px;
+background-color: red;
+border-radius: 50%;
+margin: 10px;
+float:left
+}
+.circle2 {
+height: 50px;
+width: 50px;
+background-color:yellow;
+border-radius: 50%;
+margin: 10px;
+float:left
+}
+.circle3 {
+height: 50px;
+width: 50px;
+background-color:green;
+border-radius: 50%;
+margin: 10px;
+float:left
+}
+.circle4 {
+height: 50px;
+width: 50px;
+background-color: blue;
+border-radius: 50%;
+margin: 10px;
+float:left
+}
+.circle5 {
+height: 50px;
+width: 50px;
+background-color: pink;
+border-radius: 50%;
+margin: 10px;
+float:left
+}
+.rectangle { clear:both;
+height: 100px;
+width: 250px;
+background-color: red;
+float: left;
+margin: 7px;
+margin: 10px;
+}
+.circle1:hover~.rectangle  {
+    background-color: red;
+}
+
+
+.circle2:hover~.rectangle  {
+    background-color:yellow;
+
+}
+
+.circle3:hover~.rectangle   {
+    background-color: green;
+}
+
+.circle4:hover~.rectangle  {
+    background-color: blue;
+}
+
+.circle5:hover~.rectangle  {
+    background-color: pink;
+}
+
+

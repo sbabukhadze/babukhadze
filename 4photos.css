@@ -1,0 +1,11 @@
+div.photo { 
+    margin:10px;
+    border: 1px solid grey;
+    float: left;
+    width: calc(25% - 22px)
+}
+div.photo img { width: 100%}
+div.name { text-align: center;
+height: 30px}
+div.photo:hover {border: 1px solid black}
+
