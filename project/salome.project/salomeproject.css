@@ -1,0 +1,187 @@
+
+* {
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    padding: 0;
+    margin: 0;
+}
+
+div h4 {
+    margin-top:80%;
+}
+.container {
+    /* padding: 30px; */
+    display: flex;
+    height: 100vh;
+}
+
+.statistic {
+    background-color: #DCDCDC;
+    width: 20%;
+    padding:20px;
+}
+
+.table {
+    background-color: lightgrey;
+    width: 80%;
+    padding:20px;
+   }
+
+.table h3 {
+    text-align: center;
+}
+
+
+
+/* *****buttons**** */
+
+.btn {
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+
+.but1 {
+    background-color: red;
+}
+
+.but2 {
+    background-color: #DC143C;
+}
+
+.but3 {
+    background-color: #F08080;
+}
+
+
+/* *****students data***** */
+
+.students-board {
+    display: table;
+    width: 100%;
+    position: relative;
+    border: 1px solid #000000;
+    margin-bottom: 20px;
+    min-height: 330px;
+}
+
+.students-board .stats {
+    width: 30%;
+    display: inline-block;
+    float: left;
+   
+}
+
+.students-board .scores {
+    width: 70%;
+    display: inline-block;
+    /* vertical-align: top; */
+}
+
+
+
+.students-board .student-data {
+    display: table;
+    width: 100%;
+}
+
+.students-board .student-data .student-row {
+    display: table-row;
+}
+
+.students-board .student-data .student-name {
+    text-align: left;
+    display: table-cell;
+    vertical-align: middle;
+    height: 30px;
+    border-width: 0 1px 1px 0;
+    border-color: #ffffff;
+    border-style: solid;
+    background: #cecece;
+    padding: 0 5px;
+}
+
+.students-board .student-data .average {
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    width: 70px;
+    background: green;
+    color: #ffffff;
+    border-width:0 1px 1px 0;
+    border-color: #ffffff;
+    border-style: solid;
+    font-size: 13px;
+}
+
+
+/*Student Scores*/
+
+
+.students-board .scores .scores-container {
+    width: 100%;
+    display: inline-block;
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+}
+
+.students-board .scores .scores-grid {
+    display: inline-block;
+    flex: 70px 0 0;
+    width: 70px;
+}
+
+.students-board .scores .scores-grid .score {
+    cursor: pointer;
+}
+
+.students-board .scores .scores-grid .score,
+.students-board .scores .scores-grid .score-title {
+    border-width: 0 1px 1px 0;
+    border-color: grey;
+    border-style: solid;
+    display: block;
+    width: 100%;
+    height: 30px;
+    background-color: red;
+    text-align: center;
+    /* vertical-align: middle; */
+    font-size: 13px;
+}
+
+.students-board .scores .scores-grid .score>span,
+.students-board .scores .scores-grid .score-title>span,
+    {
+    display: inline-block;
+    height: inherit;
+    width: 100%;
+}
+
+@media all and (max-width: 870px){
+    .container {
+              display: flex;
+        flex-direction: column;
+        
+            }
+    
+    .statistic {
+        flex: 1;
+        width:  100%;
+        text-align: center;
+        /* height: 100px; */
+     }
+     .table {
+         flex: 1;
+        width:  100%;
+        }
+        div h4 {
+            margin-top:20%;
+        }
+}
