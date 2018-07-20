@@ -23,8 +23,15 @@
  }    
 
  .name2 {
-    padding: 30px
+    padding: 30px;
+    border: 1px solid grey;
+    margin: 20px;
+    font-size: 1.5em;
+    color: blueviolet
 }  
+.name3 {
+padding: 30px;
+}
 
 .container1 {
     background-color: lightgray;
