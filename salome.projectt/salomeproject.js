@@ -3,7 +3,7 @@
 let btnAdd = document.querySelector(".but1");
 let btnRemove = document.querySelector(".but2");
 let lessonday = new Date(2018, 3, 28); //because when I add new day, it (first day) has to be 30 Apirl 2018.
-let names = ["n1", "n2", "n3", "n4", "n5", "n6", "n7", "n8", "n9", "n10", "n11", "n12", "n13", "n14", "n15"]; // array of scores
+let names = ["n1", "n2", "n3", "n4", "n5", "n6", "n7", "n8", "n9", "n10", "n11", "n12", "n13", "n14", "n15"];
 
 // let btnUpdate = document.querySelector(".but3");
 
@@ -16,7 +16,7 @@ btnAdd.addEventListener('click', function () { //to call functions after add  da
 
 });
 
-btnRemove.addEventListener('click', function () { //to call functions after remove button,  but in some cases it doesn't work
+btnRemove.addEventListener('click', function () { //to call functions after remove button,  but in some cases it doesn't work, dunno why
 
   removeLastDay();
   // totalDays();
@@ -24,8 +24,9 @@ btnRemove.addEventListener('click', function () { //to call functions after remo
 });
 
 
+
 // ****prompt******
-//this is even for scores,  for every student in any  lesson  day
+//this is prompt function for scores. 
 
 function addPromptEvent(element) {
   element.addEventListener('click', function () {
@@ -33,26 +34,21 @@ function addPromptEvent(element) {
     if (isNaN(input)) {    //if it  is a  number or  not, if it's not  a number, then alert  will ask to enter A NUMBER!!
       alert("Enter a Number!");
     }
-    //I have used if statements for cases when "input" is less then  0, more then 5 or  between  them.  at  the  same  time  i set  backgound style,  which is different from  default
+    //I have used if statements  when "input" is less then  0, more then 5 or  between  them.  at  the  same  time  i set  backgound style,  which is different from  default
 
     else if (input < 0 || input == 0) {
       input = 0;
       element.style.backgroundColor="red";
-      element.innerHTML=input;
       
     }
     else if (input > 5) {
       input = 5;
       element.style.backgroundColor="green";
-      element.innerHTML=input;
-
     }
     else {
       element.style.backgroundColor="green";
-      element.innerHTML=input;
-
     }
-
+    this.firstChild.innerHTML = input.toString();
     
     missedLessons();
   });
@@ -62,37 +58,28 @@ function addPromptEvent(element) {
 // ***** add new  days ******
 
 function addDays() {
-  let scores = document.getElementsByClassName("scores-container")[0]; 
+  let scores = document.getElementsByClassName("scores-container")[0]; //create class
   let scoresInside = document.createElement("div");   //create div element
-  scoresInside.classList.add("scores-grid"); //add class
+  scoresInside.classList.add("scores-grid");
   for (let i = 0; i < 16; i++) {
     if (i == 0) {
 
-//<div class="score-title">
-//<span>Thu Apr 30</span>
-//</div> 
-      let scoreTitle = document.createElement("div");  //create  "score title" where we can see lesson date
+      let scoreTitle = document.createElement("div");  //create  "score title" where we can see lesson days
       scoreTitle.classList.add("score-title");
       let spanDate = document.createElement("span");
-
       spanDate.innerHTML = nextLesson(lessonday);
       scoreTitle.appendChild(spanDate);
       scoresInside.appendChild(scoreTitle);
 
     } else {
-
-// <div class="score">
-// <span>0</span>
-//</div>
       let scoreDiv = document.createElement("div"); //create  "score" where we can see scores fore each student
-      addPromptEvent(scoreDiv); //when u click on it, u can wright inside scores for each student
+      addPromptEvent(scoreDiv);
       scoreDiv.classList.add("score");
       scoreDiv.classList.add(names[i - 1]);
       let spanScore = document.createElement("span");
       spanScore.innerHTML = "0";
       scoreDiv.appendChild(spanScore);
       scoresInside.appendChild(scoreDiv);
-      
     }
   }
   scores.appendChild(scoresInside);
@@ -162,7 +149,7 @@ function totalDays () {
 function missedLessons() {
   let missedLessons = 0;
   let arr = document.querySelectorAll(".score"); //creates array for "score"
-  for(let i = 0; i < arr.length; i++){           // for  every element in array where  score is "0" counts it
+  for(let i = 0; i < arr.length; i++){           // for  every array where  score is "0" gives a sum  
     if (arr[i].children[0].innerHTML == "0") {
       missedLessons += 1;
     }
