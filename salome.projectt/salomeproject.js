@@ -58,9 +58,9 @@ function addPromptEvent(element) {
 // ***** add new  days ******
 
 function addDays() {
-  let scores = document.getElementsByClassName("scores-container")[0]; //create class
+  let scores = document.getElementsByClassName("scores-container")[0]; 
   let scoresInside = document.createElement("div");   //create div element
-  scoresInside.classList.add("scores-grid");
+  scoresInside.classList.add("scores-grid"); //create class
   for (let i = 0; i < 16; i++) {
     if (i == 0) {
 

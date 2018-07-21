@@ -1,0 +1,29 @@
+html {
+    box-sizing: border-box;
+ }
+ 
+ 
+ body {
+    font-family: sans-serif;
+    margin: 0;
+    background:silver;
+
+ }
+ 
+ .container {
+    padding: 20px ;
+    display: grid;
+    width: 300px;
+    text-align: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: auto;  
+    align-content: center;
+       
+     }
+ 
+
+     .lines {
+        background-color: white;
+          padding: 20px;
+     }

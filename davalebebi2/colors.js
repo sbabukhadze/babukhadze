@@ -1,0 +1,24 @@
+
+document.body.style.backgroundColor = "lightblue";
+let container = document.body.firstElementChild;
+let box = container.children;
+ box[2].style.backgroundColor = "gold";
+ box[3].style.backgroundColor = "gold";
+ box[8].style.backgroundColor = "gold";
+ box[9].style.backgroundColor = "gold";
+ box[14].style.backgroundColor = "gold";
+ box[21].style.backgroundColor = "gold";
+ box[26].style.backgroundColor = "gold";
+ box[27].style.backgroundColor = "gold";
+ box[32].style.backgroundColor = "gold";
+ box[33].style.backgroundColor = "gold";
+ box[12].style.backgroundColor = "green";
+ box[13].style.backgroundColor = "green";
+ box[15].style.backgroundColor = "green";
+ box[16].style.backgroundColor = "green";
+ box[17].style.backgroundColor = "green";
+ box[18].style.backgroundColor = "green";
+ box[19].style.backgroundColor = "green";
+ box[20].style.backgroundColor = "green";
+ box[22].style.backgroundColor = "green";
+ box[23].style.backgroundColor = "green";
