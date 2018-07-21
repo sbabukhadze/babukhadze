@@ -1,0 +1,14 @@
+.container {
+    padding: 20px ;
+    display: grid;
+    width: 500px;
+    text-align: center;
+    grid-gap: 10px;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: auto; 
+}
+
+.box {
+    padding: 30px;
+    background-color: antiquewhite;
+}
