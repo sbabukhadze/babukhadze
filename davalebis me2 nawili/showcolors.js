@@ -4,11 +4,11 @@ let btn = document.querySelector(".but");
 let table = document.querySelector("colors");
 
 
-btn.addEventListener('click', function () { //to call functions after add  day button
+document.getElementById("myBtn").addEventListener("click", date);
+function date(){
+    document.getElementById("demo").innerHTML.style.dcolor = red;
+};
 
- showColors()
-
-});
 table.addEventListener('click', function() {
   choseColor()
 });
@@ -24,3 +24,6 @@ function showColors() {
 function choseColor(){
 
 }
+
+
+document.getElementsByClass("color10").style.backgroundColor = getElementsByClass("color1")
