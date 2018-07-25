@@ -1,29 +1,47 @@
 "use strict";
 
 let btn = document.querySelector(".but");
-let table = document.querySelector("colors");
+// let table = document.querySelector("colors");
+
+let colorElements = document.querySelectorAll(".container .color");
+let colorBoxes = {};
 
 
-document.getElementById("myBtn").addEventListener("click", date);
-function date(){
-    document.getElementById("demo").innerHTML.style.dcolor = red;
-};
 
-table.addEventListener('click', function() {
-  choseColor()
+btn.addEventListener('click', function () {
+  setColorsToBoxes();
 });
 
 
 
-let color1, color2, color3,
-function showColors() {
-   
+
+function setColorsToBoxes() {
+
+  let totalColors = Object.keys(colorBoxes).length;
+
+  if (colorBoxes && totalColors == 3) {
+  
+    for (let i = 1; i <= totalColors; i++) {
+
+      //print or set some color by its index :) 
+
+      document.getElementById("color_" + i).style.backgroundColor = colorBoxes[i];
+
+
+    }
+  } else {
+    alert('Not Enough Colors');
+  }
+
 }
 
+colorElements.forEach(colorElement => {
 
-function choseColor(){
+  colorElement.addEventListener('click', function (e) {
 
-}
+    let colorOfElement = window.getComputedStyle(this, null).getPropertyValue("background-color");
+    let indexOfCullomn = this.parentNode.id;
 
-
-document.getElementsByClass("color10").style.backgroundColor = getElementsByClass("color1")
+    colorBoxes[indexOfCullomn] = colorOfElement;
+  });
+});
