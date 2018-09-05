@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>App</title>
+    <style>
+        body {
+            font-family: Arial, Helvetica, sans-serif
+        }
+
+        #span {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .spanName {
+
+            padding: 7px;
+            border-radius: 10px;
+            background-color: lightblue;
+            border: grey solid 1px;
+
+        }
+       
+
+        #accending {
+            cursor: pointer;
+            background: green;
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-style: normal;
+            color: white;
+        }
+
+        #shuffle {
+            cursor: pointer;
+            background: lightskyblue;
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-style: normal;
+            color: white;
+        }
+
+        #decending {
+            cursor: pointer;
+            background: lightseagreen;
+            padding: 3px 6px;
+            border-radius: 5px;
+            font-style: normal;
+            color: white;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="info">
+        <h1 id="numb">NUMBERS </h1>
+        <div id="span" class="namef"></div>
+        <br>
+        <br>
+        <br>
+        <button id="shuffle">Shuffle Numbers</button>
+        <button id="accending">By Accending</button>
+        <button id="decending">By Decending</button>
+
+    </div>
+    <script src="jquery.min.js"></script>
+
+    <script src="numbers.js"></script>
+</body>
+
+</html>
