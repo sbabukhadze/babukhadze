@@ -1,0 +1,138 @@
+* {
+    background: grey;
+    font-family: Helvetica;
+    color: darkgreen
+   
+  }
+  
+  .container {
+    display: flex;
+  }
+  .menu {
+    /* float: left; */
+    flex: 1;
+    padding: 50px;
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .board {
+    /* float: left; */
+    flex: 3;
+  }
+  .levels  {
+    margin: 30px;
+  
+  }
+  .scores {
+    margin: 30px;
+  
+  }
+  
+  #home {
+      width: 350px;
+      height: 350px;
+      background-size: auto 350px;
+      background-repeat: no-repeat;
+      /* background-color:grey; */
+      background-position: center center;
+     
+    }
+    canvas {
+        background-color: green;
+      /* background-image: url('http://pngimg.com/uploads/angel/angel_PNG6.png'); */
+      /* background-size: 100px 100px; */
+    }
+    button {
+      background-color: green;
+      color: white;
+      border-radius: 10px;
+      font-size: 12pt;
+      float: left;
+      width: auto;
+      margin: 5px 0;
+      padding: 10px;
+      display: block;
+      clear: left;
+      cursor: pointer;
+    }
+
+    .button-primary.active {
+      background-color: red !important;
+    }
+  
+   
+    button:hover {
+      background-color:olive;
+    }
+  
+    button:disabled {
+      background-color: lightcoral;
+    }
+  
+ 
+    .game {
+      margin: 0 auto;
+      /* position: relative; */
+    }
+    #mycanvas {
+    border: 2px solid green;
+   }
+  
+   input {
+     height: 30px;
+     width: 100px;
+     color:green;
+     background: white;
+     border-radius: 10px;
+     text-align: center;
+   }
+  
+   #userInputWindow {
+     color: white;
+   }
+
+
+   #loser-message {
+    background: #fff;
+    width: 400px;
+    height: 400px;
+    margin-top: 50px;
+    position: absolute;
+    top: 0;
+    display: block;
+}
+
+/* 
+   #start-message {
+    background: #fff;
+    width: 400px;
+    height: 400px;
+    margin-top: 178px;
+    position: absolute;
+    top: 0;
+    display: block;
+} */
+
+.hidden,
+/* #start-message.hidden, */
+#loser-message.hidden {
+  display: none;
+}
+
+
+input:invalid + span:after {
+    content: '✖';
+    color: #f00;
+    padding-left: 5px;
+}
+
+input:valid + span:after {
+    content: '✓';
+    color: #26b72b;
+    padding-left: 5px;
+}
+
+.range-inputs {
+  float: left;
+}

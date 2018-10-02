@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Snake SiSi</title>
+
+    <link rel="stylesheet" href="snake.css">
+
+</head>
+
+<body>
+
+
+    <div class="container">
+
+        <div class="menu">
+            <div class="levels">
+                <h1> Game Mode </h1>
+
+                <button id="novice" class="button-primary">Novice</button>
+
+                <div id="novice-range" class="range-inputs hidden">
+                    Enter a value from 20 to 30:
+                    <input value="20" type="number" id="novicevalue" placeholder="Min: 20, max: 30" min="20" max="30" />
+                    <span class="validity"></span>
+                </div>
+
+                <button id="intermadiate" class="button-primary"> Intermadiate </button>
+                <div id="intermadiate-range" class="range-inputs hidden">
+                    Enter a value from 10 to 20:
+                    <input value="11" type="number" id="intermadiatevalue" placeholder="Min: 5, max: 10" min="10" max="20" />
+                    <span class="validity"></span>
+                </div>
+
+                <button id="hard" class="button-primary"> Hard </button>
+                <div id="hard-range" class="range-inputs hidden">
+
+                    Enter a value from 5 to 10:
+                    <input value="5" type="number" id="hardvalue" placeholder="Min: 5, max: 10" min="5" max="10" />
+                    <span class="validity"></span>
+                </div>
+
+            </div>
+            <div class="scores">
+                <span class="tScore"> Total Score : </span>
+                <span id="total-score" class="currentScore"> </span>
+                <br>
+                <span clas="hScore"> Highest Score : </span>
+                <span class="highestScore"> 0 </span>
+                <br>
+            </div>
+            <!-- 
+            <div class="countApple"> -->
+            <h3> Number of apples on the screen </h3>
+            <input type="number" class="countApple">
+            <!-- </div> -->
+
+            <!-- <div class="snakeSize"> -->
+            <h3> Initial length of the snake </h3>
+            <input id="snakeSize" type="number" class="snakeSize" min="3">
+            <!-- </div> -->
+
+        </div>
+
+        <div class="board">
+
+            <div id="userInputWindow">
+                Please enter the size of your game board and then click "create"
+                <br>
+                <br>
+                <form>
+                    <input type="number" id="enterCanvasHeight" placeholder="height"> :
+                    <input type="number" id="enterCanvasWidth" placeholder="width">
+                    <br>
+                    <br>
+                    <input type="button" value="Create" id="createNewCanvas">
+                    <br>
+                </form>
+            </div>
+            <button id='btn'>START</button>
+
+            <div class='game'>
+                <div id='home'>
+
+                    <canvas id="mycanvas" width="400" height="400">
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="main.js"></script>
+
+</body>
+
+</html>
