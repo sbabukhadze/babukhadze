@@ -1,0 +1,66 @@
+body {
+    margin: 20px;
+    background-color: aquamarine;
+}
+
+h1 {
+    text-align: center;
+}
+
+body p {
+    font-size: 1.3em;
+}
+
+h2 {
+    font-size: 1.7em;
+}
+
+/* ==== Flex properties start ==== */
+
+.container {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-evenly;
+}
+
+img {
+    max-width: 199px;
+}
+
+figure {
+    max-width: 100%;
+    margin: 10px 5px;
+    border: 3px solid black;
+    border-radius: 5px;
+}
+
+figcaption {
+    padding: 10px 5px;
+    color: black;
+    text-align: center;
+}
+
+@media only screen and (min-width: 500px) {
+    img {
+        max-width: 100%;
+    }
+    figure {
+        max-width: 45%;
+    }
+}
+
+@media only screen and (min-width: 700px) {
+    img {
+        width: 300px;
+    }
+}
+
+@media only screen and (min-width: 1200px) {
+    img {
+        width: unset;
+    }
+    figure {
+        max-width: 27%;
+    }
+}
