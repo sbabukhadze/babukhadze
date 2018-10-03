@@ -33,7 +33,7 @@ class Snake {
         for (let i = 0; i < this.snake.length; i++) {
             let x = this.snake[i].x;
             let y = this.snake[i].y;
-            apple.eat();
+            // apple.eat();
             ctx.fillStyle = "gold";
             ctx.fillRect(x, y, this.width, this.height);
             ctx.strokeStyle = "red";
@@ -53,12 +53,12 @@ class Snake {
         }
 
         //game will over when Snake touches itself
-        // for (let i = 0; i < this.snake.length - 1; i++) {
-        //     if (snakeX === this.snake[i].x && snakeY === this.snake[i].y) {
-        //         // Call Game over Function
-        //         gameFinished();
-        //     }
-        // }
+        for (let i = 0; i < this.snake.length - 1; i++) {
+            if (snakeX === this.snake[i].x && snakeY === this.snake[i].y) {
+                // Call Game over Function
+                gameFinished();
+            }
+        }
 
     }
 
@@ -113,6 +113,7 @@ function gameFinished() {
     setHighScore();
     score = 0;
     cancelAnimationFrame(game);
+    d = "RIGHT"
     ctx.clearRect(0, 0, mycanvas.width, mycanvas.height);
     let text = "loozaah!"
     ctx.font = "50px Helvetica";
@@ -152,10 +153,10 @@ class Apple {
         let appleX = apple.x;
         let appleY = apple.y;
 
-        if (snakeX === appleX && snakeY === appleY) {
+        if (snakeX == appleX && snakeY == appleY) {
             apple.redraw(); //Create new food
             score += 10;
-            setScore()
+            setScore();
             let head = { //new head
                 x: snakeX,
                 y: snakeY
@@ -164,6 +165,7 @@ class Apple {
         }
     }
 }
+
 
 
 //keys
@@ -180,10 +182,12 @@ document.addEventListener('keydown', function (event) {
     }
 })
 
-let apple = new Apple(20, 20);
-apple.draw();
+
 let snake = new Snake(x, y, 20, 20, 3);
 snake.create();
+let apple = new Apple(20, 20);
+apple.draw();
+
 
 let loop = 0;
 let loopnumber = 10;
@@ -194,7 +198,6 @@ function changeSpeed() { //change speed for levels and also show active  level
     let hard = document.getElementById("hard");
     let intermadiate = document.getElementById("intermadiate");
     let novice = document.getElementById("novice");
-
 
     let hardRange = document.getElementById("hard-range");
     let intermadiateRange = document.getElementById("intermadiate-range");
@@ -273,6 +276,7 @@ function animate() {
 
     snake.borders();
     apple.draw();
+    apple.eat()
 }
 
 function setScore(reset) {
@@ -295,7 +299,9 @@ function setHighScore(scoreParam) {
         localStorage.setItem('highScore', score);
         item.innerHTML = score;
     }
+    // localStorage.clear() 
 }
+
 setHighScore();
 
 // Default Snake Size
@@ -344,4 +350,3 @@ function createNewCanvass() {
 }
 
 createNewCanvas.addEventListener("click", createNewCanvass);
-
