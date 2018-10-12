@@ -1,0 +1,30 @@
+doctype html
+html
+    head
+        meta(chartset="utf-8")
+        title= title
+    body
+        include includes/head.pug
+        h1(style={color:'red', background:'green'})= message
+        hr
+        a(href="#"): img 
+        ul#menu.myclass
+            each n in numbers
+                li=n
+        p.
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. #[br]
+            Odit enim id a inventore illo aspernatur, excepturi quaerat? Provident cupiditate maiores, 
+            accusantium ducimus quaerat obcaecati praesentium dolorem voluptatibus, ad rem et?
+        script.
+            let num = 8;
+            if ( num < 10 )
+                console.log(`${num} < 10`)
+            else 
+                console.log(`${num} > 10`)
+
+        - let count = 0;
+        ul
+            while count < 13
+                li= count++
+        include includes/footer.pug
+            

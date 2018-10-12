@@ -1,0 +1,23 @@
+{
+  "name": "babukhadze",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sbabukhadze/babukhadze.git"
+  },
+  "author": "salome",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sbabukhadze/babukhadze/issues"
+  },
+  "homepage": "https://github.com/sbabukhadze/babukhadze#readme",
+  "dependencies": {
+    "express": "^4.16.3"
+  },
+  "devDependencies": {},
+  "description": ""
+}

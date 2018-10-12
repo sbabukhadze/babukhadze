@@ -1,0 +1,32 @@
+ /* body {
+     background-color: green;
+ } */
+
+*{
+    margin: 0;
+    padding: 0;
+}
+ .product--box {
+     width: 200px;
+     padding: 10px;
+     background-color: coral;
+     color: white;
+     font-weight: 400;
+     margin: 25px;
+     cursor: pointer;
+ }
+
+ .wrapper {
+     display : flex;
+ }
+
+ .product--price{
+     text-align: right
+ }
+
+ .product--detail{
+     text-decoration: none;
+     color: pink;
+ }
+
+ 
