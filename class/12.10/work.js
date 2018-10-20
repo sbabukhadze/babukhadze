@@ -11,9 +11,9 @@ app.use(cookieParser("cipher"));
 app.use(express.urlencoded({ extended: true }));
 
 app.get("/", (req, res) => {
-    const color = req.cookies.userColor || "white";
+    const color = req.cookies.color|| "white";
     res.render("work", { color });
-});
+    });
 
 
 app.post("/", (req, res) => {
