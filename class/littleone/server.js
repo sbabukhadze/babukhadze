@@ -5,7 +5,7 @@ const App = express();
 const person = require("./src/routes/personRoutes")
 const car = require("./src/routes/carRoutes")
 
-const PORT = 3000;
+const PORT = process.env.PORT || 3000;
 
 let personDB = [];
 let carDB = [];
@@ -35,6 +35,6 @@ App.post("/", (req, res) => {
 })
 
 App.listen(PORT, ()=> {
-    console.log(`Server Port - $(PORT)`);
+    console.log(`Server Port - ${PORT}`);
 })
 
