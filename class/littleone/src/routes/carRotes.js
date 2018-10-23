@@ -1,25 +1,21 @@
-const express = require("express");
-const router = express.Router();
 
-let products = [
-    {price: 1000222222222, title: "Apple", id: 0},
-    {price: 970444444444, title: "Google", id: 1},
-    {price: 700222222222, title: "Nokia", id: 2}
+let carDB = [
+    { car_maker: 'BMW', model: 'M5', plate_number: 'LI555KE', vin: '2654546', color: 'Red', owner_id: 1 },
+    { car_maker: 'Opel', model: 'Corsa', plate_number: 'AA222AA', vin: '445465456', color: 'Blue', owner_id: 2 },
+    { car_maker: 'Mitsubishi', model: 'Pajero', plate_number: 'XX777AA', vin: '2131213', color: 'Bronze', owner_id: 3 }
+
 ]
 
-router.get("/", (req, res) => {
-    res.render("products/index", { title: "Products Page", products} );
-})
 
-router.get("/:id(\\d)", (req, res) => {
-    let id = req.params.id;
-    res.render("products/detail", {title: `product - ${id}`, product: products[id]});
-
-})
-
-router.get("/add", (req, res) => {
-    res.json({ message : "Product  Add Page"});
+app.get("/", (req, res) =>{
+    res.render("data", {title: "title", added: false, carDB  });
+  
 })
 
 
-module.exports = router;
+app.post("/", (req, res) => {
+const { car_maker, model, plate_number, vin, color, owner_id}= req.body;
+productsDB.push( {car_maker, model, plate_number, vin, color, owner_id} );
+res.render("data", {title: "title", added: true, carDB  });
+
+})

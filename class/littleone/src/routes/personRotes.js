@@ -1,25 +1,23 @@
-const express = require("express");
-const router = express.Router();
 
-let products = [
-    {price: 1000222222222, title: "Apple", id: 0},
-    {price: 970444444444, title: "Google", id: 1},
-    {price: 700222222222, title: "Nokia", id: 2}
+let personDB = [
+    { first_name: 'Ana', last_name: 'Jobava', personal_no: '12345678911', mid_name: 'Davit', birth_date: '22/09/1988' },
+    { first_name: 'Levan', last_name: 'Kvaratskhelia', personal_no: '12345678912', mid_name: 'Akaki', birth_date: '12/09/1982' },
+    { first_name: 'Nika', last_name: 'Kapanadze', personal_no: '12345678910', mid_name: 'Giorgi', birth_date: '10/10/1987' }
 ]
 
-router.get("/", (req, res) => {
-    res.render("products/index", { title: "Products Page", products} );
-})
 
-router.get("/:id(\\d)", (req, res) => {
-    let id = req.params.id;
-    res.render("products/detail", {title: `product - ${id}`, product: products[id]});
 
-})
-
-router.get("/add", (req, res) => {
-    res.json({ message : "Product  Add Page"});
+app.get("/", (req, res) =>{
+    res.render("data", {title: "title", added: false, personDB });
+  
 })
 
 
-module.exports = router;
+app.post("/", (req, res) => {
+const { first_name, last_name, personal_no, mid_name, birth_date}= req.body;
+personDB.push( {first_name, last_name, personal_no, mid_name, birth_date } );
+res.render("data", {title: "title", added: true, personDB });
+
+})
+
+
