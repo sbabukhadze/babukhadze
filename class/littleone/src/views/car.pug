@@ -1,0 +1,24 @@
+doctype html
+head
+    title= title
+    link(rel="stylesheet", href="/css/main.css")
+body
+    h1= title
+    hr
+    a(href="/car")        
+
+    form(action="", method="post")
+        p
+          input(type="text", name="car_maker", placeholder="Car Maker")
+        p
+            input(type="text", name="model", placeholder="Car Model")
+        p
+            input(type="text", name="vin", placeholder="Car VIN", required)
+        p
+            input(type="number", name="plate_number", placeholder="State Number", required)
+        p
+            input(type="text", name="color", placeholder="Car Color")
+        p
+            //- input(type="number", name="owner_id", placeholder="Owner ID")
+        p
+            button(type="submit")   Save Car 

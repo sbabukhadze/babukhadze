@@ -16,10 +16,17 @@ app.set("view engine", "pug");
 
 app.use(express.static( path.join(__dirname, "public") )  );
 app.use(express.urlencoded({ extended: true } ) );
+<<<<<<< HEAD
+=======
+// app.use("/person", person);
+// app.use("/car", car);
+app.use("/main");
+>>>>>>> 0a8ab6d9310be8961a87769d27d17cc8237445ba
 
 app.use("/main", main);
 
 
+<<<<<<< HEAD
 
 let personDB = [
     { first_name: 'Ana', last_name: 'Jobava', personal_no: '12345678911', mid_name: 'Davit', birth_date: '22/09/1988' },
@@ -63,13 +70,33 @@ app.post("/", (req, res) => {
 const { car_maker, model, plate_number, vin, color, owner_id}= req.body;
 productsDB.push( {car_maker, model, plate_number, vin, color, owner_id} );
 res.render("data", {title: "title", added: true, carDB  });
+=======
+// app.get("/", (req, res) =>{
+//     res.render("person", {title: "Demo Title", added: false, personDB});
+//     res.render("car", {title: "Demo Title", added: false, carDB});
+// })
+
+app.get("/", (req, res) =>{
+        res.render("data", {title: "Demo Title", added: false, personDB });
+      
+    })
+
+
+app.post("/", (req, res) => {
+    const { product_name, product_price, product_id}= req.body;
+    productsDB.push( {product_id, product_name, product_price } );
+    res.render("index", {title: "Demo Title", added: true, productsDB });
+>>>>>>> 0a8ab6d9310be8961a87769d27d17cc8237445ba
 
 })
 
 
 
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> 0a8ab6d9310be8961a87769d27d17cc8237445ba
 app.listen(PORT, ()=> {
     console.log(`Server Port - ${PORT}`);
 })
