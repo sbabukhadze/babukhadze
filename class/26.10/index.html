@@ -9,6 +9,7 @@
     <script src="https://unpkg.com/react@16.4.0/umd/react.development.js" crossorigin></script>
     <script src="https://unpkg.com/react-dom@16.4.0/umd/react-dom.development.js" crossorigin></script>
     <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script src="https://unpkg.com/prop-types@15.6/prop-types.js"></script>
     <style>
     .box {
         border: 2px double #222;
@@ -76,6 +77,12 @@ function Car(props){
     )
 }
 
+
+Car.propTypes = {
+    make: PropTypes.string,
+    year: PropTypes.number,
+    className: PropTypes.string.isRequired
+}
 
 const cars = [
     {make: "VW", year: 2018, className: "box VW"},
