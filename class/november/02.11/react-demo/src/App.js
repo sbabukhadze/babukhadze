@@ -8,6 +8,9 @@ import React, { Component } from 'react';
 
 import developer from "./Play"  //obieqtis  exportistvis
 
+
+import Counter  from "./Counter"
+
 import './App.css';
 
 
@@ -15,9 +18,10 @@ function SaySomething(props){  //roca  ar mchirdeba mdogmareobis  cvlilebaze  da
   return <p>{props.text}</p>
 }
 
+const styles = {color: "red", padding: "30px", border: "2px dashed black"};
 const FooComponent = (props) =>{
   return (
-    <div style={{color: "red", padding: "30px", border: "2px dashed black"}}>
+    <div style={{...styles}}> 
       <p>{props.text}</p>
     </div>
   )
@@ -39,6 +43,10 @@ class App extends Component {
         <h2>{this.randomText()}</h2>
         <SaySomething text="say something"/>
         <FooComponent text= "say something again"/>
+        <hr/>
+        <div style={{...styles}}>
+          <Counter/>
+        </div>
       </div>
 
     );
