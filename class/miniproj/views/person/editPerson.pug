@@ -1,0 +1,25 @@
+doctype html
+head
+    title= DataBase
+    link(rel="stylesheet", href="/css/main.css")
+body
+    h1 Edit Person
+    hr
+    a(href="/persons") Avaiable Persons
+
+
+    form(action="", method="post")
+        p
+            input(type="text", name="first_name", placeholder="First Name", required, value=person.firstName)
+        p
+            input(type="text", name="last_name", placeholder="Last Name", required, value=person.lastName )
+        p
+            input(type="text", name="personal_no", placeholder="Personal N", required, value=person.personalNo)
+        p
+            input(type="text", name="mid_name", placeholder="Mid Name", value=person.middleName)
+        p
+            input(type="date", name="birth_date", placeholder="Date of Birth", value=person.birthDate)
+        p
+            input(type="hidden", name="id",  value=person.id)
+        p
+            button(type="submit")   Save Person

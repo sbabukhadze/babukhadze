@@ -1,0 +1,39 @@
+doctype html
+head
+    title= DataBase
+    link(rel="stylesheet", href="/css/main.css")
+body
+    h1= title
+    hr
+
+    div
+        p
+            a(href="/") Home Page
+        br
+
+        table(border=1, cellpadding=5)
+            thead
+                tr
+                    th Car Maker
+                    th Model
+                    th Plate Number
+                    th VIN
+                    th Color
+                    th Owner
+                    th Edit
+            tbody
+                each row in allCars
+                    tr
+                        td= row.carmaker
+                        td= row.model
+                        td= row.plateNumber
+                        td= row.vin
+                        td= row.color
+                        td
+                            a(href="car-owner/" + row.id) View Owner
+                        td
+                            a(href="cars/edit/" + row.id) Edit
+
+
+
+

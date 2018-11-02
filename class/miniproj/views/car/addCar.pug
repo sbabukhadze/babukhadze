@@ -1,0 +1,21 @@
+doctype html
+head
+    title= DataBase
+    link(rel="stylesheet", href="/css/main.css")
+body
+    h1 Add Car
+    hr
+       
+    form(action="", method="post")
+        p
+            input(type="text", name="car_maker", placeholder="Car Maker")
+        p
+            input(type="text", name="model", placeholder="Car Model")
+        p
+            input(type="number", name="plate_number", placeholder="Plate Number", required)
+        p
+            input(type="text", name="VIN", placeholder="Car VIN", required)
+        p
+            input(type="text", name="color", placeholder="Car Color")
+        p
+            button(type="submit")   Save Car

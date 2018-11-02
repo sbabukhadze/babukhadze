@@ -1,0 +1,45 @@
+doctype html
+head
+    title= DataBase
+    link(rel="stylesheet", href="/css/main.css")
+body
+    h1= title
+    hr
+     
+    div
+        p
+            a(href="/") Home Page
+            form(action="", method="get")
+                p
+                    input(type="text", name="firstName", placeholder="First Name", value=params.firstName, style="margin-right:5px")
+                    input(type="text", name="lastName", placeholder="Last Name", value=params.lastName, style="margin-right:5px")
+                    input(type="text", name="personalNo", placeholder="Personal No", value=params.personalNo, style="margin-right:5px")
+                    button(type="submit") Search
+                    br
+
+        table(border=1, cellpadding=5)
+            thead
+                tr
+                    th First Name
+                    th Last Name
+                    th Middle Name
+                    th Personal Numeber
+                    th Birth Date
+                    th Cars
+                    th Edit
+            tbody
+                each row in persons
+                    tr
+                        td= row.firstName
+                        td= row.lastName
+                        td= row.middleName
+                        td= row.personalNo
+                        td= row.birthDate
+                        td
+                            a(href="persons/cars/" + row.id) View Cars
+                        td
+                            a(href="persons/edit/" + row.id) Edit
+
+
+
+
