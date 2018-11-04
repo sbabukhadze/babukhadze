@@ -52,7 +52,7 @@ class App extends Component {
     return (
       <div className="App">
         <List
-        itemInput={this.itenInput}
+        itemInput={this.itemInput}
         addItem={this.addItem}
         handleInput={this.handleInput}
         currentItem={this.state.currentItem}
