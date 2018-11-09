@@ -18,18 +18,31 @@ class App extends Component {
     .then( data => data.json())
     .then( data => {
       this.setState( {data, isLoading: false})
-      console.log(this.state.date);
     })
     .catch(err => console.log(err))
   }
+
+  onSearchHandler(e){
+    this.setState ( { query: e.target.value});
+  } 
+
+
+onSumbit = (e) => {
+  e.preventDefault();
+  const query = e.target.children.searchText.value;
+  this.setState({ query});
+}
+
   render() {
     return (
       <div className="wrapper">
-        <Search />
+        <Search onSearchHandler={this.onSearchHandler} 
+        onSumbit={this.onSumbit}
+          />
         {this.state.isLoading && <Loader/>}
-        {!this.state.isLoading && (
-          <List data={this.state.data.hits} limit={0}/>
-        )}
+        {!this.state.isLoading && 
+          <List  data={this.state.data.hits}  limit={10}/>
+        }
              
       </div>
     );
