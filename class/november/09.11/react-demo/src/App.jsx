@@ -4,6 +4,7 @@ import List from "./components/List";
 import hocCRUD from "./hoc/hocCRUD"
 
 function App(data, create, update, remove) {
+  console.log(data)
   return (
     <div className="container">
       <Form onSubmit={create} />

@@ -1,0 +1,104 @@
+body {
+  font: 2.25rem/1.2 Helvetica, Verdana, sans-serif;
+}
+
+header {
+  color: white;
+  font-size: 1.2rem;
+  display: flex;
+  box-sizing: border-box;
+  padding: 40px;
+  /* width: 100%; */
+}
+
+h1,
+h2 {
+  font-family: Georgia, serif;
+  font-weight: normal;
+}
+
+h1 {
+}
+h2 {
+  font: 2.25rem/1.2 Helvetica, Verdana, sans-serif;
+}
+
+/* a {
+  color: white;
+} */
+
+a:link,
+a:visited {
+  color: white;
+  text-decoration: none;
+}
+a:hover,
+a:focus,
+a:active {
+  color: grey;
+}
+
+#menu {
+  display: flex;
+  justify-content: center;
+}
+
+#menu ul {
+  list-style: none;
+  margin: 0;
+  padding: 5px;
+  display: flex;
+}
+
+#menu li {
+  display: inline-block;
+  font-size: 1em;
+  padding-right: 10px;
+}
+
+/* #navigation{
+    justify-content: center
+} */
+#navigation{
+    position: relative
+
+}
+
+
+.background {
+  position: absolute;
+  z-index: -1;
+  max-width: 100%;
+}
+
+#font,
+h1,
+h2 {
+  font-family: "Dancing Script", cursive;
+}
+
+button {
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.footer-item {
+  display: flex;
+}
+
+.footer-item ul li {
+  list-style: none;
+  font: 2.25rem/1.2 Helvetica, Verdana, sans-serif;
+  color: black;
+}
+
+.footer-item ul {
+  text-align: left;
+  padding-left: 0;
+}
+
+hr {
+  border: 1px solid grey;
+  width: 100%;
+  box-align: center;
+}

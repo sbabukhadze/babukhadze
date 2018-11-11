@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import axios from "axios";
 
 function hocCRUD(CustomComponent, API_URL) {
-  return class extends Component {
+  return class hocCRUD extends Component {
     state = {
       data: []
     };
@@ -41,33 +41,34 @@ function hocCRUD(CustomComponent, API_URL) {
               ...updatedItem
             };
           });
-          this.setState( {data} )
+          this.setState({ data });
         });
     };
 
     remove = id => {
-        axios.delete(`${API_URL}/${id}`)
-        .then( response => response.data )
-        .then( () => {
+      axios
+        .delete(`${API_URL}/${id}`)
+        .then(response => response.data)
+        .then(() => {
+          const data = this.state.data.filter(item => item.id !== id);
+          this.setState({ data });
+        });
+    };
 
-            const data = this.state.data.filter( item => item.id !==id );
-            this.setState( {data} );
-
-        })
-    }
-
-    render(){
-        return <CustomComponent
-        data={this.state.data}
-        create={this.create}
-        update={this.update}
-        remove={this.remove}
-        get={this.get}
-        {...this.props}
+    render() {
+      return (
+        <CustomComponent
+          data={this.state.data}
+          create={this.create}
+          update={this.update}
+          remove={this.remove}
+          get={this.get}
+          {...this.props}
         />
-
+      );
     }
-  };
+  }
+  
 }
 
 export default hocCRUD;
