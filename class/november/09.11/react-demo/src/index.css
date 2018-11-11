@@ -12,3 +12,15 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+
+form {
+  margin: 30px 0;
+}
+
+.todo input {
+  margin-right:0;
+}
+.todo label {
+  
+}

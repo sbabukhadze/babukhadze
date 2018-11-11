@@ -10,12 +10,14 @@ function Form({ onSubmit }) {
   return (
     <form onSubmit={handSubmit}>
       <div className="input-group">
-        <input type="text" classname="form-control form-control-sm" ref={ inp => input = inp} />
-          <span className="input-group-btn">
+        <input
+          type="text"
+          className="form-control form-control-sm"
+          ref={inp => (input = inp)}
+        />
+        <span className="input-group-btn">
           <button className="btn btn-secondary"> Save</button>
-
-          </span>
-       
+        </span>
       </div>
     </form>
   );

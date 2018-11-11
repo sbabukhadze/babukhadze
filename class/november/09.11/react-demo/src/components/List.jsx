@@ -1,8 +1,21 @@
-import react from "react"
+import React from "react"
 
-function List( { todos, onToggle, onremove}){
+function List( { todos, onToggle, onRemove}){
     return(
-        <div classname="list-custom list-group">
+        <div className="list-custom list-group">  
+        {
+            todos.map( todo => 
+                <div className="todo list-group-item  justify-content-between" key={todo.id} > 
+                <label>
+                    <input type="checkbox"
+                     checked={todo.done}
+                     onChange={ () => onToggle(todo.id)}/>
+                </label>
+                <button className="btn btn-info btn-sm" onClick={ () => onRemove(todo.id)}>Remove</button>
+
+                </div>
+            )
+        }
 
         </div>
     )
