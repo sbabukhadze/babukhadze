@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>JS Demo</title>
+</head>
+<body>
+    <script>
+        let persons = [
+            { 
+                name: 'Oto',
+                age: 22,
+                id: 1,
+            },
+            { 
+                name: 'Grigoli',
+                age: 20,
+                id: 2,
+            },
+            {
+                name: 'Mamuka',
+                age: 20,
+                id: 14,
+             },
+            { 
+                name: 'Salome',
+                age: 17,
+                id: 10,
+            },
+        ]
+
+        let personsHTML = persons.map(  person =>  `<p>User - ${person.name}, Id - ${person.id}</p>` );
+        let personsFiltered = persons.filter( person  => {
+            return person.age < 20
+        }).map(  person =>  `<p>User - ${person.name}, Id - ${person.id}</p>` );
+
+        let personsReduced  = persons.reduce( (total, current)  => {
+            return total += `<p>User - ${current.name}, Id - ${current.id}</p>`; 
+        }, '');
+
+        let numbers = [2,3,7,8];
+        // let sum = numbers.reduce( ( total, current) => total + current , 7);
+        // console.log(sum); 
+        document.body.innerHTML = personsHTML.join(' ');
+        document.body.innerHTML += '<hr>'
+        document.body.innerHTML += personsFiltered.join(' ');
+        document.body.innerHTML += '<hr>'
+        document.body.innerHTML += personsReduced;
+
+        Array.prototype.customReduce = function(callbackFunc, initValue){
+            if( typeof initValue === 'undefined' ) return undefined;
+
+            let result = initValue;
+            
+            for( let i = 0; i < this.length; i++){
+                result = callbackFunc(result, this[i]);
+            }
+
+            return result;
+        }
+
+        console.log( numbers.customReduce( (t, n) => t+n , 0) );
+    </script>
+</body>
+</html>
