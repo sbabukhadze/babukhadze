@@ -168,6 +168,7 @@ h2 {
   width: calc(100% / 3);
   text-align: center;
   background-image: url('slider.jpg');
+  background-size: cover;
 
   height: 300px;
   /* position: absolute;
