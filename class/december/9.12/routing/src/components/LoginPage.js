@@ -1,4 +1,5 @@
 import React from "react";
+import {Redirect} from "react-router-dom"
 
 export default class LoginPage extends React.Component {
   constructor(props) {
@@ -6,25 +7,45 @@ export default class LoginPage extends React.Component {
 
     this.OnSubmitHandler = this.OnSubmitHandler.bind(this);
     this.username = React.createRef();
+    this.password= React.createRef();
   }
 
   OnSubmitHandler(event) {
     event.preventDefault();
-    console.log(this.username.current.value);
-    this.login();
+    // console.log(this.username.current.value, this.password.current.value);
+    this.login(this.username.current.value, this.password.current.value);
   }
 
-  login = () => {
-    fetch("http://localhost:5000/login")
+  login = (username, password) => {
+    fetch("http://localhost:5000/login", {
+      method: "POST",
+      headers:{
+        "Accept": "application/json",  //informacia miviRo  da gavagzavno  json formatshi  da midleveari  sworad afromatirebs
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify({username, password})
+
+    })
       .then(res => res.json())
-      .then(user => {
-        console.log(user);
+      .then(result => {
+        console.log(result);
+        if( result.auth){
+          localStorage.setItem("authorized", result.username);
+          this.setState({isLoggedIn: true});
+        }
+        else{
+          localStorage.removeItem("authorized")
+        }
       })
       .catch(err => console.log(err));
   };
   render() {
+    const {isLoggedIn} = this.state;
+    if(isLoggedIn){
+      return <Redirect to={"/profile"}/>
+    }
     return (
-      <form className="form form-login">
+      <form className="form form-login" onSubmit={this.OnSubmitHandler}>
         <div className="input--group">
           <label>
             Username:
@@ -46,6 +67,7 @@ export default class LoginPage extends React.Component {
               type="password"
               placeholder="Password"
               className="form--input"
+              ref={this.password}
             />
           </label>
         </div>

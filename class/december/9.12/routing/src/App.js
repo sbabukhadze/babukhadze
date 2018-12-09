@@ -12,6 +12,9 @@ import './App.css';
 
 
 class App extends Component {
+  state = {
+    showLogin: true
+  }
   render() {
     return (
       <Router>
@@ -24,12 +27,20 @@ class App extends Component {
           <li className="menu--item">
             <Link to="/contact">Contact</Link>
           </li>
-          <li className="menu--item">
-            <Link to="/login">Login</Link>
-          </li>
-          <li className="menu--item">
+          {this.state.showLogin && (
+                <li className="menu--item">
+                <Link to="/login">Login</Link>
+              </li>
+          )}
+          {!this.state.showLogin && (
+            <li className="menu--item">
             <Link to="/profile">Profile</Link>
           </li>
+
+          )
+          }
+      
+
         </ul>
 
         <Route path="/" exact render={ () => ( <IndexPage title={Data.index.title} desc={Data.index.desc}/> )} />
