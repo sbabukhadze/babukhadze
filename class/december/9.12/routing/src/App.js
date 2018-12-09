@@ -5,7 +5,7 @@ import {ProtectedRoute} from "./routes/ProtectedRoute";
 import Data from "./db/data.json";
 
 import {IndexPage} from "./components/IndexPage";
-import {LoginPage} from "./components/LoginPage";
+import LoginPage from "./components/LoginPage";
 import {ProfilePage} from "./components/ProfilePage";
 import {ContactPage} from "./components/ContactPage";
 import './App.css';
