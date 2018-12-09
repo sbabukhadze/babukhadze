@@ -1,0 +1,11 @@
+{
+    "index":{
+        "title": "Techub Academy",
+        "desc":  "index page"
+    },
+
+    "contact":{
+        "title": "Techub Contact page",
+        "desc": "contact page"
+    }
+}

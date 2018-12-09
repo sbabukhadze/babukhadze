@@ -16,6 +16,7 @@
   },
   "homepage": "https://github.com/sbabukhadze/babukhadze#readme",
   "dependencies": {
+    "cors": "^2.8.5",
     "express": "^4.16.4"
   },
   "devDependencies": {},
