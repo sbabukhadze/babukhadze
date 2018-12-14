@@ -6,7 +6,6 @@ import {
   // Link,
 } from 'react-router-dom';
 import Index from './components/pages/index';
-import IndexProduct from "./components/pages/index.product"
 
 
 import './assets/css/main.css';
@@ -21,7 +20,6 @@ export default class App extends Component {
         <div className="App">
           <Switch>
             <Route exact path="/" component={Index} />
-            <Route path="/product" component={IndexProduct}/>
           </Switch>
 
           <Footer />
