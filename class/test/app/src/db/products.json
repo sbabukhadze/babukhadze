@@ -28,6 +28,26 @@
        "price":"20",
        "color":"5",
        "material":"3"
-    }
+    },
+    {  
+      "id":"4",
+      "url":"https://as2.ftcdn.net/jpg/00/38/02/93/500_F_38029315_7H9LxphcKKdLWe79ezqfFc0tsCfkQ5VN.jpg",
+      "name":"Kitchen Chair",
+      "category":"2",
+      "desc":"Kitchen Chair. Small, Comfortable and warm",
+      "price":"20",
+      "color":"5",
+      "material":"3"
+   },    {  
+      "id":"5",
+      "url":"https://as1.ftcdn.net/jpg/00/82/97/02/500_F_82970295_3wHdW6xUT0vxHqR0MC9drRaOMVP2MeLF.jpg",
+      "name":"Kitchen Chair",
+      "category":"2",
+      "desc":"Kitchen Chair. Small, Comfortable and warm",
+      "price":"20",
+      "color":"5",
+      "material":"3"
+   }
+
     
  ]
