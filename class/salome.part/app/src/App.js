@@ -6,7 +6,7 @@ import {
   // Link,
 } from 'react-router-dom';
 import Index from './components/pages/index';
-import IndexProduct from "./components/pages/index.product"
+import IndexProduct from "./components/pages/indexProduct"
 
 
 import './assets/css/main.css';
