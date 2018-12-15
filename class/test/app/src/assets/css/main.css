@@ -15,7 +15,7 @@ li {
 body {
   background: #ffffff;
   font-size: 13px;
-  font-family: 'Raleway', sans-serif;
+  font-family: "Raleway", sans-serif;
 }
 
 .container {
@@ -67,7 +67,7 @@ body {
   width: 100%;
   height: 1200px;
   overflow: hidden;
-  background: #364d79;
+  /* background: #364d79; */
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -75,29 +75,33 @@ body {
   align-content: stretch;
 }
 
-  .gallery-container
+.gallery-container
   .frist-grid
   .gallery-container
   .second-grid
   .gallery-container
   .third-grid {
   width: 33%;
+  /* height: 1200px; */
 }
 
 .gallery-container .single-item {
   overflow: hidden;
   width: 100%;
-  /* height: 300px; */
+  height: 500px;
   position: relative;
 }
 
 .gallery-container .single-item .image {
+  height: 100%;
   overflow: hidden;
+  
 }
 
 .gallery-container .single-item .image img {
   width: 100%;
   height: 100%;
+
 }
 
 .gallery-container .single-item .info {
@@ -108,7 +112,7 @@ body {
 }
 
 .gallery-container .single-item .info::before {
-  content: '';
+  content: "";
   position: absolute;
   width: 80px;
   height: 3px;

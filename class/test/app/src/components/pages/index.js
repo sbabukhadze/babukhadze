@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import ExtraFooter from '../extraFooter';
 import Sidebar from '../sidebar';
 import Slider from '../slider';
-import Gallery from '../gallery';
+import HomePageProduct from '../homePageProduct';
 
 class Index extends Component {
   render() {
@@ -13,7 +13,7 @@ class Index extends Component {
         <div className="right-side">
           <Slider />
 
-          <Gallery />
+          <HomePageProduct />
         </div>
 
         <ExtraFooter />
